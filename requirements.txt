@@ -1,0 +1,7 @@
+# Core is pure stdlib. Optional extras for API and QR.
+# fastapi>=0.104.0
+# uvicorn>=0.24.0
+# qrcode[pil]>=7.4.2
+# cryptography>=41.0.0
+
+pytest>=7.4.0
