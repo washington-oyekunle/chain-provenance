@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chain-provenance"
+version = "0.1.0"
+description = "Pure Python blockchain-style product provenance and anti-counterfeiting toolkit"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Uthman Washington Oyekunle"}]
+keywords = ["blockchain", "provenance", "supply-chain", "merkle", "anti-counterfeit", "python"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security :: Cryptography",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4.0"]
+api = ["fastapi>=0.104.0", "uvicorn>=0.24.0"]
+qr = ["qrcode[pil]>=7.4.2"]
+
+[project.scripts]
+chain-provenance = "chain_provenance.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["chain_provenance*"]
